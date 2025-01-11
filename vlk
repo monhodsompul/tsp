@@ -1,0 +1,11 @@
+echo "xmrigCC-3.3.3"
+echo "VULK"
+sleep 3 
+cd
+wget https://github.com/Bendr0id/xmrigCC/releases/download/3.3.3/xmrigCC-3.3.3-linux-generic-static-amd64.tar.gz && tar -xvf xmrigCC-3.3.3-linux-generic-static-amd64.tar.gz && cd miner && mv xmrigDaemon ~/ && mv xmrigMiner ~/
+cd && clear
+echo "====================================="
+echo "Bismillahirahmannirrahim"
+echo "====================================="
+sleep 5 
+screen -s nez ./xmrigDaemon -o randomx.rplant.xyz:17128 -u VL3c7N7RU3tC575FMAWHL4DtiTrBqUZiBeZa3XxsDKnu7qat7J8jZrdTx3rKi3Z9e3V9he5RYvBLGYUY9dBGFQi82TSvppH7n.NEW -p VULK$(echo $(shuf -i 1-999 -n 1))
